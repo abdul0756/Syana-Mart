@@ -1,0 +1,252 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.roboto {
+  font-family: "Montserrat", sans-serif;
+}
+
+.edu {
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+.home_text_buy {
+  text-shadow: 10px -1px 6px #ffffff;
+}
+
+.home_text_buy_below {
+  text-shadow: 8px 1px 6px #16A34A
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.nav {
+  box-shadow: 0px 8px 10px 0px #16a34ab8;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaders,
+.loadersB {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: absolute;
+  width: 1.15em;
+  height: 13em;
+  border-radius: 50px;
+  background: #e0e0e0;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.15em;
+  height: 5em;
+  background: #e0e0e0;
+  border-radius: 50px;
+  border: 1px solid #e2e2e2;
+  box-shadow:
+    inset 5px 5px 15px #d3d2d2ab,
+    inset -5px -5px 15px #e9e9e9ab;
+  mask-image: linear-gradient(to bottom,
+      black calc(100% - 48px),
+      transparent 100%);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.15em;
+  height: 4.5em;
+  background: #e0e0e0;
+  border-radius: 50px;
+  border: 1px solid #e2e2e2;
+  box-shadow:
+    inset 5px 5px 15px #d3d2d2ab,
+    inset -5px -5px 15px #e9e9e9ab;
+  mask-image: linear-gradient(to top,
+      black calc(100% - 48px),
+      transparent 100%);
+}
+
+.loaderA {
+  position: absolute;
+  width: 1.15em;
+  height: 13em;
+  border-radius: 50px;
+  background: transparent;
+}
+
+.ball0,
+.ball1,
+.ball2,
+.ball3,
+.ball4,
+.ball5,
+.ball6,
+.ball7,
+.ball8,
+.ball9 {
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+
+  background: radial-gradient(circle at top left, #4ADE80, #15803D);
+
+  box-shadow:
+    0px 0px 10px rgba(74, 222, 128, 0.6),
+    0px 0px 20px rgba(74, 222, 128, 0.5),
+    inset 2px 2px 5px rgba(21, 128, 61, 0.6),
+    inset -2px -2px 5px rgba(74, 222, 128, 0.6);
+
+  transition: transform 800ms cubic-bezier(1, -0.4, 0, 1.4);
+  animation: 3.63s move ease-in-out infinite;
+}
+
+.loader:nth-child(2) {
+  transform: rotate(20deg);
+}
+
+.loader:nth-child(3) {
+  transform: rotate(40deg);
+}
+
+.loader:nth-child(4) {
+  transform: rotate(60deg);
+}
+
+.loader:nth-child(5) {
+  transform: rotate(80deg);
+}
+
+.loader:nth-child(6) {
+  transform: rotate(100deg);
+}
+
+.loader:nth-child(7) {
+  transform: rotate(120deg);
+}
+
+.loader:nth-child(8) {
+  transform: rotate(140deg);
+}
+
+.loader:nth-child(9) {
+  transform: rotate(160deg);
+}
+
+.loaderA:nth-child(2) {
+  transform: rotate(20deg);
+}
+
+.loaderA:nth-child(3) {
+  transform: rotate(40deg);
+}
+
+.loaderA:nth-child(4) {
+  transform: rotate(60deg);
+}
+
+.loaderA:nth-child(5) {
+  transform: rotate(80deg);
+}
+
+.loaderA:nth-child(6) {
+  transform: rotate(100deg);
+}
+
+.loaderA:nth-child(7) {
+  transform: rotate(120deg);
+}
+
+.loaderA:nth-child(8) {
+  transform: rotate(140deg);
+}
+
+.loaderA:nth-child(9) {
+  transform: rotate(160deg);
+}
+
+.ball1 {
+  animation-delay: 0.2s;
+}
+
+.ball2 {
+  animation-delay: 0.4s;
+}
+
+.ball3 {
+  animation-delay: 0.6s;
+}
+
+.ball4 {
+  animation-delay: 0.8s;
+}
+
+.ball5 {
+  animation-delay: 1s;
+}
+
+.ball6 {
+  animation-delay: 1.2s;
+}
+
+.ball7 {
+  animation-delay: 1.4s;
+}
+
+.ball8 {
+  animation-delay: 1.6s;
+}
+
+.ball9 {
+  animation-delay: 1.8s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0em);
+  }
+
+  50% {
+    transform: translateY(12em);
+  }
+
+  100% {
+    transform: translateY(0em);
+  }
+}
