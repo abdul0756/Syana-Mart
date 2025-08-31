@@ -14,26 +14,37 @@ export const authOptions = {
       },
       async authorize(creds) {
         await connectToDb();
+
+        // Find user by username (case-insensitive)
         const user = await User.findOne({ username: creds.username?.toLowerCase() });
-        if (!user) return null;
-        const ok = await bcrypt.compare(creds.password, user.password);
-        if (!ok) return null;
-        return { id: String(user._id), name: user.username, email: user.email };
+        if (!user) throw new Error("User not found");
+
+        // Check password
+        const isValid = await bcrypt.compare(creds.password, user.password);
+        if (!isValid) throw new Error("Invalid password");
+
+        // Return user object
+        return {
+          id: String(user._id),
+          name: user.username,
+        };
       },
     }),
   ],
-  session: { strategy: "jwt" },
+  session: {
+    strategy: "jwt",
+  },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.username = user.name;
         token.uid = user.id;
+        token.username = user.name;
       }
       return token;
     },
     async session({ session, token }) {
-      session.user.name = token.username;
       session.user.id = token.uid;
+      session.user.name = token.username;
       return session;
     },
   },
