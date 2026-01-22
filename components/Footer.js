@@ -75,7 +75,7 @@ export default function Footer() {
                   onClick={() => {
                     setShowModal(true);
                     setModalMessage(
-                      `For any query please contact us at instagram "abdul_56_08"`
+                      `For any query please contact us at instagram "abdul_56_07"`
                     );
                   }}
                 >
@@ -113,7 +113,7 @@ export default function Footer() {
             </h2>
             <div className="flex space-x-5 ml-1.5 text-2xl">
               <Link
-                href="https://www.instagram.com/abdul_56_08/"
+                href="https://www.instagram.com/abdul_56_07/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-400 transition-colors duration-200"
